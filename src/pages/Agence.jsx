@@ -1,4 +1,5 @@
 import { useGSAP } from "@gsap/react";
+import Footer from '../components/comman/Footer'
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useRef } from "react";
@@ -60,9 +61,6 @@ const Agence = () => {
           } else {
             imageIndex = imageArray.length-1;
           }
-
-          console.log(imageIndex)
-
           imageRef.current.src = imageArray[imageIndex]
         }
       }
@@ -75,22 +73,25 @@ const Agence = () => {
   return (
     <div>
       <div className="section1 relative py-2">
-      <div ref={imageDivRef} className="absolute overflow-hidden h-[20vw] rounded-3xl w-[15vw] top-40 left-[30vw]">
+      <div ref={imageDivRef} className="absolute overflow-hidden lg:h-[20vw] h-44 rounded-3xl lg:w-[15vw] w-36 top-40 left-[30vw]">
         <img ref={imageRef} className="h-full w-full object-cover" src="https://k72.ca/images/teamMembers/Carl_480x640.jpg?w=480&h=640&fit=crop&s=f0a84706bc91a6f505e8ad35f520f0b7" alt="" />
       </div>
       <div className="relative font-[font-300]">
-      <div className="mt-[55vh]">
-        <h1 className="text-[16vw] uppercase leading-[18vw] text-center">
+      <div className="lg:mt-[55vh] mt-72">
+        <h1 className="lg:text-[16vw] text-7xl text-black uppercase leading-[18vw] text-center">
           SEVEN7Y <br />
           TWO
         </h1>
       </div>
-      <div className="pl-[40%] mt-10">
-        <p className="text-3xl ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; We’re inquisitive and open-minded, and we make sure creativity crowds out ego from every corner. A brand is a living thing, with values, a personality and a story. If we ignore that, we can achieve short-term success, but not influence that goes the distance. We bring that perspective to every brand story we help tell.</p>
+      <div className="lg:pl-[40%] p-4 mt-10">
+        <p className="lg:text-3xl text-2xl leading-[23px] text-black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; We’re inquisitive and open-minded, and we make sure creativity crowds out ego from every corner. A brand is a living thing, with values, a personality and a story. If we ignore that, we can achieve short-term success, but not influence that goes the distance. We bring that perspective to every brand story we help tell.</p>
       </div>
     </div>
       </div>
       <div className="section2 h-screen">
+      </div>
+      <div>
+        <Footer/>
       </div>
     </div>
   );

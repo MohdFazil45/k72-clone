@@ -6,10 +6,10 @@ import { NavbarContext } from "../../context/NavContext";
 const fullScreenNav = () => {
 
   const [navOpen, setNavOpen] = useContext(NavbarContext)
-  console.log(navOpen)
 
   const fullNavLinkRef = useRef(null)
   const fullScreenRef = useRef(null)
+
 function gsapAnimation() {
   const tl = gsap.timeline({ defaults: { duration: 0.4, ease: "power2.out" } });
 
@@ -56,9 +56,7 @@ function gsapAnimationReverse() {
 
   // Finally hide fullscreen wrapper
   tl.to(".fullscreennav", { autoAlpha: 0 });
-}
-
-
+}   
 
   useGSAP(function () {
     if (navOpen) {
@@ -88,14 +86,14 @@ function gsapAnimationReverse() {
         </div>
         <div onClick={() => {
           setNavOpen(false)
-        }} className="h-20 w-20 relative cursor-pointer">
+        }} className="nav-header h-20 w-20 relative cursor-pointer">
           <div className="w-0.5 h-28 -rotate-45 origin-top bg-[#D3FD50] absolute"></div>
           <div className="w-0.5 h-28 rotate-45 origin-top right-0 bg-[#D3FD50] absolute"></div>
         </div>
       </div>
-      <div className="py-12">
+      <div className="py-12 mt-[16vh] lg:mt-0">
             <div className="link origin-top relative border-t-1 border-white">
-                <h1 className="font-[font-300] text-[8vw] uppercase text-center leading-[0.8] pt-4">Projects</h1>
+                <h1 className="font-[font-300] lg:text-[8vw] text-[15vw] lg:mb-0 mb-4 uppercase text-center leading-[0.8] pt-4">Projects</h1>
                 <div className="moveLink flex absolute top-0 text-black bg-[#D3FD50]">
                   <div className="moveX flex  items-center">
                       <h2 className="whitespace-nowrap font-[font-300] text-[8vw] uppercase text-center leading-[0.8] pt-4">See everything</h2>
@@ -112,7 +110,7 @@ function gsapAnimationReverse() {
                 </div>
             </div>
             <div className="link origin-top relative border-t-1 border-white">
-                <h1 className="font-[font-300] text-[8vw] uppercase text-center leading-[0.8] pt-4">Agency</h1>
+                <h1 className="font-[font-300] lg:text-[8vw] text-[15vw] lg:mb-0 mb-4 uppercase text-center leading-[0.8] pt-4">Agency</h1>
                 <div className="moveLink flex  absolute top-0 text-black bg-[#D3FD50]">
                   <div className="moveX flex   items-center">
                       <h2 className="whitespace-nowrap font-[font-300] text-[8vw] uppercase text-center leading-[0.8] pt-4">know us</h2>
@@ -129,7 +127,7 @@ function gsapAnimationReverse() {
                 </div>
             </div>
             <div className="link origin-top relative border-t-1 border-white">
-                <h1 className="font-[font-300] text-[8vw] uppercase text-center leading-[0.8] pt-4">contact</h1>
+                <h1 className="font-[font-300] lg:text-[8vw] text-[15vw] lg:mb-0 mb-4 uppercase text-center leading-[0.8] pt-4">contact</h1>
                 <div className="moveLink flex absolute top-0 text-black bg-[#D3FD50]">
                   <div className="moveX flex  items-center">
                       <h2 className="whitespace-nowrap font-[font-300] text-[8vw] uppercase text-center leading-[0.8] pt-4">send us a fax</h2>
@@ -146,7 +144,7 @@ function gsapAnimationReverse() {
                 </div>
             </div>
             <div className="link origin-top relative border-t-1 border-b-1 border-white">
-                <h1 className="font-[font-300] text-[8vw] uppercase text-center leading-[0.8] pt-4">blog</h1>
+                <h1 className="font-[font-300] lg:text-[8vw] text-[15vw] lg:mb-0 mb-4 uppercase text-center leading-[0.8] pt-4">blog</h1>
                 <div className="moveLink flex absolute top-0 text-black bg-[#D3FD50]">
                   <div className="moveX flex  items-center">
                       <h2 className="whitespace-nowrap font-[font-300] text-[8vw] uppercase text-center leading-[0.8] pt-4">read articles</h2>
