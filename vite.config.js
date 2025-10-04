@@ -8,4 +8,5 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
     react()],
+    base: '/k72-clone/',
 })
